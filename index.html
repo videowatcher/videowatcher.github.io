@@ -1,5 +1,6 @@
-<script src="https://jwpsrv.com/library/pi+ZUL00EeOE1CIACrqE1A.js"></script><div id='playerhlEUXvKVuLKj'></div><script>
- 
+<script src="https://jwpsrv.com/library/pi+ZUL00EeOE1CIACrqE1A.js"></script><div id='playerhlEUXvKVuLKj'></div>
+<script>
+function playhash(){ 
     jwplayer('playerhlEUXvKVuLKj').setup({
         file: window.location.hash.substring(1),
         width: '100%',
@@ -7,4 +8,7 @@
         autostart: 'true',
         primary: 'flash'
     });
+}
+window.onhashchange=playhash;
+playhash();
 </script>
