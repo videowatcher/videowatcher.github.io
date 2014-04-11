@@ -1,14 +1,14 @@
 <script src="https://jwpsrv.com/library/pi+ZUL00EeOE1CIACrqE1A.js"></script><div id='playerhlEUXvKVuLKj'></div>
 <script>
-function playhash(){ 
+function play(event){ 
     jwplayer('playerhlEUXvKVuLKj').setup({
-        file: window.location.hash.substring(1),
+        file: event.data,
         width: '100%',
         aspectratio: '4:3',
         autostart: 'true',
         primary: 'flash'
     });
 }
-window.onhashchange=playhash;
-playhash();
+window.onmessage=play;
+parent.postMessage("ready","*")
 </script>
