@@ -12,7 +12,7 @@ function play(event){
     });
 }
 window.onmessage=play;
-parent.postMessage("ready","*")
+parent.postMessage("ready"+window.location.hash,"*")
 </script>
 <style>
 html, body {
